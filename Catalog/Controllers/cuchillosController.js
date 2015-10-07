@@ -17,10 +17,10 @@ app.controller('cuchillosController', ['$scope', '$rootScope', '$http', 'catalog
 				name: 'Hoja',
 				filters: $scope.hojas
 			},
-			/*tipo: {
+			tipo: {
 				name: 'Año',
 				filters: $scope.years
-			}*/
+			}
 		};
 		$scope.photos = getPhotos($scope.cuchillosData);
 		$scope.rawPhotos = getPhotos($scope.cuchillosData);
@@ -58,7 +58,7 @@ app.controller('cuchillosController', ['$scope', '$rootScope', '$http', 'catalog
 	var getYears = function (cuchillos) {
 		var years = [];
 		for(var i = 0; i < cuchillos.length; i ++) {
-			if(!cuchillos[i].Anio && years.indexOf(cuchillos[i].Anio) == -1) {
+			if(cuchillos[i].Anio != null && (years.indexOf(cuchillos[i].Anio) == -1)) {
 				var year = cuchillos[i].Anio;
 				years.push(year);
 			}
