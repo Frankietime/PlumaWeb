@@ -34,8 +34,8 @@ app.controller('cuchillosController', ['$scope', '$rootScope', '$http', 'catalog
 		var photos = [];
 		for (var cuchillo in cuchillos) {
 			photos.push({
-				"picMin": cuchillos[cuchillo].picMin,
-				"url": '/Content/imgs/' + cuchillos[cuchillo].picMax,
+				"picMin": '/Content/imgs/thumbnails/' + cuchillos[cuchillo].picMin,
+				"picMax": '/Content/imgs/' + cuchillos[cuchillo].picMax,
 				"nombre": cuchillos[cuchillo].Nombre,
 				"Hoja": cuchillos[cuchillo].Hoja,
 				"info": cuchillos[cuchillo].Info,

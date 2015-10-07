@@ -16,7 +16,7 @@ app.directive('photogallery', [ '$compile', '$q', '$filter', 'treeService', 'Lig
                 angular.forEach (scope.photos, function (photo, iterator) {
                     $(photos).append( 
                             '<a ng-click="openLightboxModal(' + iterator + ',' + scope.photos.indexOf(photo) + ')">' +
-                            '<img  class="img-thumbnail" width="300px" height="300px" src="/Content/imgs/' + photo.picMin + '">' +
+                            '<img  class="img-thumbnail" width="300px" height="300px" src="' + photo.picMin + '">' +
                             '</a>'                                
                     );
                 });   

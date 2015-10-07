@@ -11,10 +11,10 @@ app.config(['$routeProvider', 'LightboxProvider', function ($routeProvider, Ligh
 		otherwise({ redirectTo: '/home' });
 	LightboxProvider.templateUrl = '/Catalog/Views/Templates/lightbox2.html';
 	LightboxProvider.fullScreenMode = true;
-	// set the caption of each image as its text color
-  /*LightboxProvider.getImageCaption = function (imageUrl) {
-    return '#' + imageUrl.match(/00\/(\w+)/)[1];
-  };*/
+	
+  LightboxProvider.getImageUrl = function (image) {
+    return image.picMax;
+  };
 
   // increase the maximum display height of the image
   LightboxProvider.calculateImageDimensionLimits = function (dimensions) {
