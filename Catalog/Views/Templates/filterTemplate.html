@@ -1,0 +1,61 @@
+<div class="nav_container horizontal" id="mainGalleryContainer" style="display: inline">
+     <div class="collapse navbar-collapse" id="collapse-0">
+          <ul class="nav navbar-nav catalog-filter">
+               <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="">Filtrar por<span class="caret"></span></a>
+                    <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                         <li ng-repeat="filter in filters | orderBy: name" class="dropdown-submenu">
+                              <a tabindex="-1">{{filter.name}}</a>
+                              <ul class="dropdown-menu">
+                                   <li id="{{filter.name + item}}" enabled=true ng-repeat="item in filter.filters | orderBy: item"><a tabindex="-1" href="" ng-click="setFilter(filter.name, item); toggle(filter.name, item);">{{item}}</a></li>
+                              </ul>
+                         </li>
+                    </ul>
+               </li>
+          </ul>
+     </div>
+</div>
+<div masonry>
+<div id="content_container" style="style: align:center;">
+     <div id="current-gallery">
+          <div id="photos">
+               <div class="main">
+                    <div id="gallery-container">
+                         <div class="masonry-brick" id="gallery"></div>
+                    </div>
+               </div>
+          </div>
+     </div>    
+</div>   
+</div masonry>
+
+
+
+
+
+
+<!--
+<div class="nav_container horizontal" style="display: inline">
+     <div class="collapse navbar-collapse" id="collapse-0">
+          <ul class="nav navbar-nav catalog-filter">
+               <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="">Filtrar por<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                         <li ng-repeat="filter in filters" value="filtrar-por-{{filter.name | lowercase}}"><a href="" ng-click="setFilter(filter)">
+                              </a>
+                         </li>
+                    </ul>
+               </li>
+          </ul>
+     </div>
+</div>
+     <div id="content_container" style="style: align:center;">
+     <div id="current-gallery">
+     <div id="photos">
+     <div class="main">
+     <div class="gamma-container gamma-loading" id="gamma-container">
+     <ul class="gamma-gallery" id="gamma-ul">
+     </ul>' +
+     <div class="gamma-overlay"></div>
+     </div></div></div>
+     -->
