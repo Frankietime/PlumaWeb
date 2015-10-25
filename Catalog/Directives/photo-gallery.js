@@ -1,6 +1,7 @@
 var app = angular.module('app'); 
 
-app.directive('photogallery', [ '$compile', '$q', '$filter', 'treeService', 'Lightbox', function ($compile, $q, $filter, treeService, Lightbox) {
+app.directive('photogallery', [ '$compile', '$q', '$filter', 'treeService', 'Lightbox',
+    function ($compile, $q, $filter, treeService, Lightbox) {
 	return {
 		restrict: 'E',
         templateUrl:  'Catalog/Views/Templates/filterTemplate.html',

@@ -1,6 +1,6 @@
 var app = angular.module('app'); 
 
-app.directive('catalog', [ '$compile', function ($compile) {
+app.directive('catalog', [ '$compile', '$q', '$routeParams', function ($compile, $q, $routeParams) {
 	return {
 		restrict: 'E',
 		template: 	'<div class="nav_container horizontal" style="display: inline">' +
@@ -14,15 +14,21 @@ app.directive('catalog', [ '$compile', function ($compile) {
                     '<div id="current-catalog"></div>',
         link: function (scope, attrs, element) {
             var div = angular.element.find('#current-catalog');
-            var loadGallery = function (item, path) {
-                if(path.params.product != 'all') {
+            var loadGallery = function (path) {
+                var product = path.product
+                if(product != 'all') {
                 $(div).find(":first-child").remove();
-                $(div).append('<photogallery ng-controller="' + path.params.product + 'Controller">PHOTO GALLERY</photogallery>');
+                $(div).append('<photogallery ng-controller="' + product + 'Controller">PHOTO GALLERY</photogallery>');
                 $compile($(div).contents())(scope);
                 }
             };
-            scope.$on('$routeChangeSuccess', loadGallery);
-			scope.$on('loadGallery', loadGallery);
+            scope.$on('$routeChangeSuccess', function (current, previous) {
+                var promise = loadGallery($routeParams)
+                $q.all(promise).then(function (results) {
+                    scope.$emit('loadPhotos');
+                });
+            });
+			//scope.$on('loadGallery', loadGallery);
 		}		
 	};
 }]);

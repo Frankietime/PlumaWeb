@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'bootstrapLightbox', 'ui.bootstrap', 'wu.masonry']);
+var app = angular.module('app', ['ngRoute', 'bootstrapLightbox', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate']);
 
 app.config(['$routeProvider', 'LightboxProvider', function ($routeProvider, LightboxProvider) {
 	$routeProvider.

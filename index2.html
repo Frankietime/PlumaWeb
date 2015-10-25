@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="Content/css/catalog.css"/>
+        <link rel="stylesheet" type="text/css" href="Content/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="Content/css/gamma-style.css"/>
+        <link rel="stylesheet" type="text/css" href="Content/css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="Content/css/site.css"/>
+        <link rel="stylesheet" type="text/css" href="Content/css/jquery-ui.css"/>
+        <link rel="stylesheet" href="Content/css/angular-bootstrap-lightbox.css">
+        <link rel='stylesheet' href="Content/css/loading-bar.css" type='text/css' media='all'/>
+		<noscript><link rel="stylesheet" type="text/css" href="Content/css/noJS.css"/></noscript>
+		<script src="Scripts/js/modernizr.custom.70736.js"></script>
+		<script src="Scripts/js/modernizr.custom.js"></script>
+		<script src="Scripts/js/respond.js"></script>
+		<title>La Pluma de Asís</title>
+	    <script src="Scripts/js/jquery-1.11.3"></script>
+	    <script src="Scripts/js/jquery-ui-1.11.2"></script>
+	    <script src="Scripts/js/jquery.dlmenu.js"></script>
+        <script src="Scripts/js/bootstrap.js"></script>
+        
+	    <script src="Scripts/js/angular.js"></script>
+        <script src="Scripts/js/ui-bootstrap-tpls.js"></script>
+	    <script src="Scripts/js/angular-route.js"></script>
+        <script src="Scripts/js/angular-animate.min.js"></script>
+        <script src="Scripts/js/jquery.bridget.js"></script>
+        <script src="Scripts/js/imagesloaded.pkgd.js"></script>
+        <script src="Scripts/js/masonry.pkgd.js"></script>
+        <script src="Scripts/js/angular-masonry.js"></script>
+
+        <script type='text/javascript' src="Scripts/js/loading-bar.js"></script>
+
+        <script src="Scripts/js/angular-bootstrap-lightbox.js"></script>
+	    <!--App-->
+	    <script src="app.js"></script>
+	    <!--Services-->
+        <script src="Services/treeService.js"></script>
+	    <script src="Services/catalogFilterService.js"></script>
+	    <!--Controllers-->
+	    <script src="mainController.js"></script>
+	    <script src="homeController.js"></script>
+	    <script src="Catalog/Controllers/catalogController.js"></script>
+	    <script src="Catalog/Controllers/cuchillosController.js"></script>
+	    <!--Directives-->	    
+	    <script src="Catalog/Directives/catalog.js"></script>
+	    <script src="Catalog/Directives/photo-gallery.js"></script>
+        <script src="Catalog/Directives/photo-info.js"></script>
+	    <script src="Catalog/Directives/onload.js"></script>
+	</head>
+	<body ng-app="app">
+		<div ng-controller="mainController">
+			<div class="header_container">
+        		<div class="header_content">
+            <div class="header_img">
+                <a href="#/home">
+                    <img id="" width="100%" height="203" src="Content/imgs/pluma-logo.png">
+                </a>
+            </div>
+            <div class="header_img">
+                <a href="#/home">
+                    <img id="" width="303" height="203" src="Content/imgs/pluma.png">
+                </a>
+            </div>
+    <div class="pluma-nav">
+            <div class="collapse navbar-collapse" id="collapse-0"> <!-- padding-left: 180px;-->
+            	<!--<ul class="nav navbar-nav"><li class="dropdown">
+            		<div class="page_link">
+            			<a style="float: left;" href="#/historia">Historia</a>
+            		</div>
+            	</ul></li>
+            	<ul class="nav navbar-nav"><li class="dropdown">
+            		<div class="page_link">
+            			<a style="float: left;" href="#/taller">Taller</a>
+            		</div>
+            	</ul></li>-->
+            	<ul class="nav navbar-nav"><li class="dropdown"><div class="page_link">
+            		<a style="float: left;" class="dropdown-toggle" data-toggle="dropdown" href="">
+            			Objetos
+            		</b></a>
+            		<ul class="dropdown-menu">
+                        <li><a href="#/catalog/all">Todo el catálogo</a></li>
+            			<li><a href="#/catalog/cuchillos">Cuchillos</a></li>
+            		</ul></div></li>
+            	</ul>
+            	<!--<ul class="nav navbar-nav"><li class="dropdown">
+            		<div class="page_link">
+            			<a style="float: left;" href="#/autor">Autor</a>
+            		</div>
+            	</ul></li>-->
+            	<ul class="nav navbar-nav"><li class="dropdown">
+            		<div class="page_link">
+            			<a style="float: left;" href="#/contacto">Contacto</a>
+            		</div>
+            	</ul></li>
+            </div>
+        </div>
+    <div id="content_container" style="style: align:center;">
+		<ng-view></ng-view>
+	</div>
+
+		</div>
+	    <!--Other Scripts-->	    
+		<script src="Scripts/js/js-url.min.js"></script>
+		<script src="Scripts/js/jquerypp.custom.js"></script>
+		<script src="Scripts/js/gamma.js"></script>
+	</body>
+</html>

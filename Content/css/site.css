@@ -122,3 +122,10 @@ input[type="checkbox"].input-validation-error {
     left: 100%; 
     top:0;
 }
+
+.spinner-hide .loading {
+visibility: visible;
+}
+.spinner-show .loading {
+visibility: hidden;
+}

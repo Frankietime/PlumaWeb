@@ -896,6 +896,15 @@ a#fullscreen:active {
     margin-right: 200px;
 }
 
+/*Custom CSS*/
+
+.pluma-nav {
+    text-align: center;
+    padding-top: 17px;
+    width: 50%;
+    margin: auto;
+}
+
 
 /*
  * In-browser code editing made "almost bearable" by CodeMirror: http://marijn.haverbeke.nl/codemirror
