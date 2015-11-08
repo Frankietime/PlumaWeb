@@ -20,8 +20,8 @@ app.config(['$routeProvider', 'LightboxProvider', function ($routeProvider, Ligh
   LightboxProvider.calculateImageDimensionLimits = function (dimensions) {
     return {
       'maxWidth': dimensions.windowWidth >= 768 ? // default
-        dimensions.windowWidth - 92 :
-        dimensions.windowWidth - 52,
+        dimensions.windowWidth - 592 :
+        dimensions.windowWidth - 552,
       'maxHeight': 1600                           // custom
     };
   };
@@ -29,7 +29,7 @@ app.config(['$routeProvider', 'LightboxProvider', function ($routeProvider, Ligh
   // the modal height calculation has to be changed since our custom template is
   // taller than the default template
   LightboxProvider.calculateModalDimensions = function (dimensions) {
-    var width = Math.max(400, dimensions.imageDisplayWidth + 32);
+    var width = Math.max(100, dimensions.imageDisplayWidth + 32);
 
     if (width >= dimensions.windowWidth - 20 || dimensions.windowWidth < 768) {
       width = 'auto';

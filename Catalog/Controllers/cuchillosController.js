@@ -3,10 +3,10 @@ var app = angular.module('app');
 app.controller('cuchillosController', ['$scope', '$rootScope', '$http', 'catalogFilterService', 'Lightbox', function ($scope, $rootScope, $http, catalogFilterService, Lightbox) {
 	$scope.openLightboxModal = function (iterator, index) {
                 Lightbox.openModal($scope.photos, iterator);
-                Lightbox.title = $scope.photos[index].nombre;
-                Lightbox.description = $scope.photos[index].info;
+                
                 $rootScope.singleView = false;
             };
+    $scope.$on('loadImgData');
 	$http.get('Backend/Controllers/cuchillos.php').success(function (data) {
 		$scope.cuchillosData = data;
 		$scope.hojas = getHojas($scope.cuchillosData);
