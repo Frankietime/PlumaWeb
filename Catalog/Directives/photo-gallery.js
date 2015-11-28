@@ -24,7 +24,7 @@ app.directive('photogallery', [ '$compile', '$q', '$filter', 'catalogFilterServi
                 });   
                 $compile($(photos).contents())(scope);          
             }
-            // renderea la galería cada vez que se aplica un filtro (template en Gamma Ln 409)
+            // renderea la galería cada vez que se aplica un filtro
             scope.$on('loadPhotos', loadPhotos);
             scope.setFilter = function (key, value) {
                 var keyValue = [{

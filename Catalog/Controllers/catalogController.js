@@ -13,7 +13,7 @@ app.controller('catalogController', ['$scope', '$rootScope', '$http', '$routePar
     var defaultValue = 'cuchillos';
     var product = $routeParams.product;
     // get product data
-	$http.get('Backend/Controllers/' + product || defaultValue + '.php').success(function (data) {
+	$http.get('Backend/Controllers/' + product || defaultValue + '.php', {cache: true}).success(function (data) {
 		$scope.cuchillosData = data;
 		// sets product specific items into $scope
 		catalogProductService.getItems($scope, product, data);
