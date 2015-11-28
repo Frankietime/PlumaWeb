@@ -1,31 +1,31 @@
 var app = angular.module('app'); 
 
-app.directive('photogallery', [ '$compile', '$q', '$filter', 'treeService', 'Lightbox',
-    function ($compile, $q, $filter, treeService, Lightbox) {
+app.directive('photogallery', [ '$compile', '$q', '$filter', 'catalogFilterService', 'Lightbox',
+    function ($compile, $q, $filter, catalogFilterService, Lightbox) {
 	return {
 		restrict: 'E',
         templateUrl:  'Catalog/Views/Templates/filterTemplate.html',
         link: function (scope, attrs, element) {
-            
             // setea las opciones de filtro
             var loadPhotos = function () {
-                
                 var gallery = angular.element.find('#gallery-container');
                 $(gallery).find('#gallery').remove();
-                $(gallery).append('<div id="gallery" ng-show="{{singleView}}"max-width="70%" max-height="70%"></ul>');
+                $(gallery).append('<div id="gallery" class="gallery-container" ng-show="{{singleView}}"max-width="70%" max-height="70%"></ul>');
                 var photos = $(gallery).find('#gallery');
                 angular.forEach (scope.photos, function (photo, iterator) {
                     $(photos).append( 
+                            '<div class="photo-grid">' +
+                            '<span class="centerer"></span>' +
                             '<a ng-click="openLightboxModal(' + iterator + ',' + scope.photos.indexOf(photo) + ')">' +
                             '<img  class="img-thumbnail" width="300px" height="300px" src="' + photo.picMin + '">' +
-                            '</a>'                                
+                            '</a>' +
+                            '</div>'                                
                     );
                 });   
-                    $compile($(photos).contents())(scope);          
+                $compile($(photos).contents())(scope);          
             }
             // renderea la galería cada vez que se aplica un filtro (template en Gamma Ln 409)
             scope.$on('loadPhotos', loadPhotos);
-            
             scope.setFilter = function (key, value) {
                 var keyValue = [{
                     key: key,
@@ -47,7 +47,9 @@ app.directive('photogallery', [ '$compile', '$q', '$filter', 'treeService', 'Lig
                 }                
             };
             scope.toggle = function (key, value) {
-                var id = '#' + key + value
+                var id = '#' + key + value;
+                // formats string to a valid input for jQuery selector
+                id = id.replace(/([ ;?%&,.+*~\':"!^$[\]()=>|\/@])/g,'\\$1');  
                 id = $(id);
                 var newValue = id.attr('enabled');
                 if(id.attr('enabled') == 'true') {                                       

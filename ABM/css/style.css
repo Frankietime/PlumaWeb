@@ -150,6 +150,10 @@ input[type="submit"]:hover{
 	background: url(../images/img-sprite.png) no-repeat -62px -2px;
 }
 
+.catalog{
+  background: url(../images/catalog.png) no-repeat -62px -2px;
+}
+
 .signout{
 	background: url(../images/img-sprite.png) no-repeat -93px -2px;
 }
@@ -339,16 +343,16 @@ span.cloud {
 }
 .element-left {
   float: left;
-  width:31.5%;
+  width:5.5%;
 }
 .element-right {
   float: left;
-   width: 31.5%;
+   width: 70%
    margin:0 2.5%;
 }
 .element-last {
-    float: left;
-    width: 31.5%;
+    float: right;
+    width: 30%;
 }
 span.cloud {
     float: left;
@@ -610,4 +614,40 @@ li.button a {
     font-size: 16px;
     padding: 16px 14px;
 }
+}
+
+/* BOOTSTRAP COPYPASTES :P */
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+.panel-body {
+  padding: 15px;
+}
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  .panel-primary {
+  border-color: #337ab7;
+}
+.panel-primary > .panel-heading {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #337ab7;
+}
+.panel-primary > .panel-heading .badge {
+  color: #337ab7;
+  background-color: #fff;
+}
+.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #337ab7;
 }

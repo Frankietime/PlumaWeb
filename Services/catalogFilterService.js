@@ -20,7 +20,6 @@ app.factory('catalogFilterService', [ function () {
 			};
 			$scope.photos = $scope.filteredPhotos;
 		}
-
-	};	
+	};
 	return service;
 }]);

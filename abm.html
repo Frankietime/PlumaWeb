@@ -17,7 +17,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--google fonts-->
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
-
 <script src="/Scripts/js/jquery-1.11.3"></script>
 <script src="/Scripts/js/jquery-ui-1.11.2"></script>
 <script src="/Scripts/js/jquery.dlmenu.js"></script>
@@ -32,7 +31,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!-- Controllers -->
 <script src="Controllers/abmMainController.js"></script>
-<script src="Controllers/abmMenuController.js"></script>
 <!-- //end-smoth-scrolling -->
 <script>$(document).ready(function(c) {
 	$('.log-close').on('click', function(c){
@@ -47,31 +45,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body ng-app="abm">
 	<h1>Taller La Pluma ABM</h1>
 <div class="element">
+		<div class="element-left">
+		<br>
+		
+	   </div>
 		<div class="element-right">
+			<br>
 			<ng-view></ng-view>
 		</div>
-		<div ng-controller="abmMenuController" class="element-last">
-    <div ng-if="cookie">
+		<div ng-if="{{cookie}}" class="element-last">
 		<ul class="content">
       <li class="menu">
           <ul>
-		    <li class="button"><a href="#">Perfil<span class="icon"> </span></a></li>
+		    <li class="button"><a href="#">Profile<span class="icon"> </span></a></li>
             <li class="dropdown">
                 <ul class="icon-navigation">
-                    <li><a href="#">Cambiar imagen personal</a></li>
-                    <li><a href="#">Notas</a></li>
+                    <li><a href="#">Change your pic</a></li>
+                    <li><a href="#">Change your usernae</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact me</a></li>
                 </ul>
 			</li>
           </ul>          
       </li>     
       <li class="menu">
           <ul>
-		    <li class="button"><a href="#">Catálogo<span class="icon msg"> </span><i>3</i></a></li>          	
+		    <li class="button"><a href="#">Messages<span class="icon stat"> </span><i>13</i></a></li>          	
             <li class="dropdown">
                 <ul class="icon-navigation">
-                    <li><a href="#/abm-catalog/cuchillos">Cuchillos<span>[09]</sapn></a></li>
-                    <li><a href="#">Lámparas<span>[01]</sapn></a></li>
-                    <li><a href="#">Mates<span>[03]</sapn></a></li>
+                    <li><a href="#">Inbox<span>[09]</sapn></a></li>
+                    <li><a href="#">Outbox<span>[01]</sapn></a></li>
+                    <li><a href="#">Sent messages<span>[03]</sapn></a></li>
                 </ul>
 			</li>
           </ul>          
@@ -81,9 +85,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <li class="button"><a href="#">Settings<span class="icon msg"> </span> </a></li>
             <li class="dropdown">
                 <ul class="icon-navigation">
-                	<li><a href="#">Perfil<span><img src="images/profile.png" /></span></a></li>
+                	<li><a href="#">Profile<span><img src="images/profile.png" /></span></a></li>
                 	<li><a href="#">Password<span><img src="images/key.png" /></span></a></li>
-                	<li><a href="#">Notificaciones<span><img src="images/noyifictions.png" /></span></a></li>
+                	<li><a href="#">Notifications<span><img src="images/noyifictions.png" /></span></a></li>
+                	<li><a href="#">Pro Account<span><img src="images/pro.png" /></span></a></li>
+                	<li><a href="#">Billing<span><img src="images/billing.png" /></span></a></li>
                 </ul>
 			</li>
           </ul>          
@@ -101,12 +107,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           </ul>
       </li>
   </ul>
-    </div>
 		</div>
 	  <div class="clear"> </div>
 </div>
 <div class="copy-right">
-			<p><a href="http://tallerlapluma.com">© Taller La Pluma</a></p>
+			<p>© 2015 Login Profile Widget. All rights reserved | Design by  <a href="http://w3layouts.com/" target="_blank">  W3layouts </a></p>
 </div>
 
 </body>

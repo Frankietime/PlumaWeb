@@ -129,3 +129,17 @@ visibility: visible;
 .spinner-show .loading {
 visibility: hidden;
 }
+.gallery-container {
+    max-width: 100%
+}
+.photo-grid {
+    width:100%;
+    max-width:70%;
+    display: inline;
+}
+.centerer
+{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}

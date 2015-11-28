@@ -7,8 +7,8 @@ app.config(['$routeProvider', 'LightboxProvider', function ($routeProvider, Ligh
 		when('/contacto', { templateUrl: '/contacto.html', controller: 'homeController' }).
 		when('/catalog/', { templateUrl: '/Catalog/Views/catalog.html', controller: 'catalogController', reloadOnSearch: false }).
 		when('/catalog/:product', { templateUrl: '/Catalog/Views/catalog.html', controller: 'catalogController', reloadOnSearch: false }).
-		when('/catalog-description/:description', { templateUrl: '/Catalog/Views/Templates/catalog-description.html', controller: 'catalogDescriptionController', reloadOnSearch: false }).
-		otherwise({ redirectTo: '/home' });
+		when('/catalog-description/:description', { templateUrl: '/Catalog/Views/Templates/catalog-description.html', controller: 'catalogDescriptionController', reloadOnSearch: false });
+		//otherwise({ redirectTo: '/home' });
 	LightboxProvider.templateUrl = '/Catalog/Views/Templates/lightbox2.html';
 	LightboxProvider.fullScreenMode = true;
 	

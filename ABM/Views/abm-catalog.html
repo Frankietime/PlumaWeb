@@ -1,0 +1,79 @@
+
+<!-- //for-mobile-apps -->
+<link href="Content/css/catalog.css" rel="stylesheet" type="text/css" media="all" />
+<link href='//fonts.googleapis.com/css?family=Signika:400,300,600,700' rel='stylesheet' type='text/css'>
+
+<script>$(document).ready(function(c) {
+	$('.alert-close').on('click', function(c){
+		$('.message').fadeOut('slow', function(c){
+	  		$('.message').remove();
+		});
+	});	  
+});
+</script>
+<script>$(document).ready(function(c) {
+	$('.alert-close1').on('click', function(c){
+		$('.message1').fadeOut('slow', function(c){
+	  		$('.message1').remove();
+		});
+	});	  
+});
+</script>
+<script>$(document).ready(function(c) {
+	$('.alert-close2').on('click', function(c){
+		$('.message2').fadeOut('slow', function(c){
+	  		$('.message2').remove();
+		});
+	});	  
+});
+</script>
+</head>
+<body>
+	<!-- main -->
+		<div class="container">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Catálogo</div>
+				<div class="panel-body">
+					<div class="main-grid1">
+						<ul>
+							<li><a href="#" class="car">Añadir nuevo producto</a></li>
+						</ul>
+					</div>
+					<div class="main-grid2">
+						<h2>Nombre del catalogo (numero de productos)</h2>
+						<div class="cart_box">
+							<div class="message">
+								 <div class="alert-close"> </div> 
+								<div class="list_img"><img src="images/1.jpg" class="img-responsive" alt=""/></div>
+								<div class="list_desc"><h4><a href="#">Velit esse molestie</a></h4><span class="actual">
+								 $30.00</span></div>
+								  <div class="clear"></div>
+							</div>
+						</div>
+						<div class="cart_box">
+						 <div class="message1">
+							 <div class="alert-close1"> </div> 
+							<div class="list_img"><img src="Content/images/2.jpg" class="img-responsive" alt=""/></div>
+							<div class="list_desc"><h4><a href="#">Velit esse molestie</a></h4><span class="actual">
+							 $15.00</span></div>
+							  <div class="clear"></div>
+						  </div>
+						</div>
+						<div class="cart_box1">
+						  <div class="message2">
+							 <div class="alert-close2"> </div> 
+							<div class="list_img"><img src="images/3.jpg" class="img-responsive" alt=""/></div>
+							<div class="list_desc"><h4><a href="#">Velit esse molestie</a></h4><span class="actual">
+							 $20.00</span></div>
+							  <div class="clear"></div>
+						  </div>
+						</div>
+							
+							<div class="clear"> </div>
+						</div>
+				</div>
+		</div>
+		</div>
+	<!-- //main -->
+</body>
+</html>

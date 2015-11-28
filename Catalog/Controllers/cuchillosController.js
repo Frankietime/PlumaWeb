@@ -1,13 +1,14 @@
 var app = angular.module('app'); 
 
-app.controller('cuchillosController', ['$scope', '$rootScope', '$http', 'catalogFilterService', 'Lightbox', function ($scope, $rootScope, $http, catalogFilterService, Lightbox) {
+app.controller('cuchillosController', ['$scope', '$rootScope', '$http', 'catalogFilterService', 'Lightbox', '$routeParams',
+	function ($scope, $rootScope, $http, catalogFilterService, Lightbox, $routeParams) {
 	$scope.openLightboxModal = function (iterator, index) {
                 Lightbox.openModal($scope.photos, iterator);
                 
                 $rootScope.singleView = false;
             };
     $scope.$on('loadImgData');
-	$http.get('Backend/Controllers/cuchillos.php').success(function (data) {
+	$http.get('Backend/Controllers/' + $routeParams.produt + '.php').success(function (data) {
 		$scope.cuchillosData = data;
 		$scope.hojas = getHojas($scope.cuchillosData);
 		$scope.years = getYears($scope.cuchillosData);
