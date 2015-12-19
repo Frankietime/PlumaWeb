@@ -9,11 +9,13 @@ app.controller('catalogController', ['$scope', '$rootScope', '$http', '$routePar
                 Lightbox.openModal($scope.photos, iterator);                
                 $rootScope.singleView = false;
             };
-    // default value when no value in $routeParams
-    var defaultValue = 'cuchillos';
     var product = $routeParams.product;
+    // default value when no value in $routeParams
+    if (!product) {
+    	product = 'cuchillos';
+    }
     // get product data
-	$http.get('Backend/Controllers/' + product || defaultValue + '.php', {cache: true}).success(function (data) {
+	$http.get('Backend/Catalog/Controllers/' + product + '.php', {cache: true}).success(function (data) {
 		$scope.cuchillosData = data;
 		// sets product specific items into $scope
 		catalogProductService.getItems($scope, product, data);

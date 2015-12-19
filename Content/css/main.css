@@ -840,7 +840,7 @@ a#fullscreen:active {
  * Other
  */
 
-/* Admin and following icons — only seen by members */
+/* Admin and following icons ï¿½ only seen by members */
 .toolset {
     position: fixed;
     top: 10px; right: 10px;
@@ -909,3 +909,13 @@ a#fullscreen:active {
 /*
  * In-browser code editing made "almost bearable" by CodeMirror: http://marijn.haverbeke.nl/codemirror
  */
+
+
+/*
+    Custom CSS
+*/
+
+
+.abm-menu {
+    float: right;
+}
