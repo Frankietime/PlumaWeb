@@ -1,113 +1,101 @@
 <!--Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+	-->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Taller La Pluma ABM</title>
+    <title>Taller La Pluma ABM</title>
+    <!-- Custom Theme files -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Login Profile Widget Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <!--google fonts-->
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../Content/css/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="../Content/css/jquery-ui.structure.css"/>
+    <link rel="stylesheet" type="text/css" href="../Content/css/jquery-ui.theme.css"/>
 
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-<!-- Custom Theme files -->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<meta name="keywords" content="Login Profile Widget Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<!--google fonts-->
-<link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="../Scripts/js/jquery.ui.accordion.js"></script>
 
-<script src="/Scripts/js/jquery-1.11.3"></script>
-<script src="/Scripts/js/jquery-ui-1.11.2"></script>
-<script src="/Scripts/js/jquery.dlmenu.js"></script>
-<script src="/Scripts/js/bootstrap.js"></script>
-
-<script src="/Scripts/js/angular.js"></script>
-<script src="/Scripts/js/ui-bootstrap-tpls.js"></script>
-<script src="/Scripts/js/angular-route.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-<script src="/Scripts/js/angular-bootstrap-lightbox.js"></script>
-<script src="abm.js"></script>
-
-<!-- Controllers -->
-<script src="Controllers/abmMainController.js"></script>
-<script src="Controllers/abmMenuController.js"></script>
-<!-- //end-smoth-scrolling -->
-<script>$(document).ready(function(c) {
-	$('.log-close').on('click', function(c){
-		$('.login-bottom').fadeOut('slow', function(c){
-	  		$('.login-bottom').remove();
-		});
-	});	  
-});
-</script>
-<!--scroral start -->
+    <script src="../Scripts/js/bootstrap.js"></script>
+    <script src="../Scripts/js/angular.js"></script>
+    <script src="../Scripts/js/ui-bootstrap-tpls.js"></script>
+    <script src="../Scripts/js/angular-route.js"></script>
+    <script type="text/javascript" src="../Scripts/js/script.js"></script>
+    <script src="../Scripts/js/angular-bootstrap-lightbox.js"></script>
+    <script src="../abm.js"></script>
+    <!-- //end-smoth-scrolling -->
+    <script>
+        $(document).ready(function(c) {
+            $('.log-close').on('click', function(c){
+                $('.login-bottom').fadeOut('slow', function(c){
+                    $('.login-bottom').remove();
+                });
+            });
+            $('#accordion').accordion({
+                heightStyle: "content",
+                collapsible: true,
+                active: false
+            });
+            $( '#selectable' ).selectable();
+        });
+    </script>
+    <!--scroral start -->
 </head>
-<body ng-app="abm">
-	<h1>Taller La Pluma ABM</h1>
-<div class="element">
-		<div class="element-right">
-			<ng-view></ng-view>
-		</div>
-		<div ng-controller="abmMenuController" class="element-last">
-    <div ng-if="cookie">
-		<ul class="content">
-      <li class="menu">
-          <ul>
-		    <li class="button"><a href="#">Perfil<span class="icon"> </span></a></li>
-            <li class="dropdown">
-                <ul class="icon-navigation">
-                    <li><a href="#">Cambiar imagen personal</a></li>
-                    <li><a href="#">Notas</a></li>
-                </ul>
-			</li>
-          </ul>          
-      </li>     
-      <li class="menu">
-          <ul>
-		    <li class="button"><a href="#">Catálogo<span class="icon msg"> </span><i>3</i></a></li>          	
-            <li class="dropdown">
-                <ul class="icon-navigation">
-                    <li><a href="#/abm-catalog/cuchillos">Cuchillos<span>[09]</sapn></a></li>
-                    <li><a href="#">Lámparas<span>[01]</sapn></a></li>
-                    <li><a href="#">Mates<span>[03]</sapn></a></li>
-                </ul>
-			</li>
-          </ul>          
-      </li>
-      <li class="menu">
-          <ul>
-		    <li class="button"><a href="#">Settings<span class="icon msg"> </span> </a></li>
-            <li class="dropdown">
-                <ul class="icon-navigation">
-                	<li><a href="#">Perfil<span><img src="images/profile.png" /></span></a></li>
-                	<li><a href="#">Password<span><img src="images/key.png" /></span></a></li>
-                	<li><a href="#">Notificaciones<span><img src="images/noyifictions.png" /></span></a></li>
-                </ul>
-			</li>
-          </ul>          
-      </li>
-      <li class="menu info">      
-          <ul>
-		    <li class="button"><a href="#">Logout<span class="icon signout"> </span> </a></li>
-            <li class="dropdown">
-                <ul class="icon-navigation">
-                    <li><a href="#">Sign out</a></li>
-                    <li><a href="#">Keep changes</a></li>
-                    <li><a href="#">Help disk</a></li>
-                </ul>
-			</li>
-          </ul>
-      </li>
-  </ul>
+<body>
+<h2>Taller La Pluma ABM</h2>
+    <br />
+    <div ng-controller="abm.mainController">
+        <div class="container">
+            <div class="row">
+                <div id="accordion" class="abm-menu col-md-4">
+                    <h3>Usuario</h3>
+                    <div>
+                        <ul class="list-group">
+                            <button type="button" class="list-group-item">Foto</button>
+                            <button type="button" class="list-group-item">Notificaciones</button>
+                            <button type="button" class="list-group-item">Calendario</button>
+                        </ul>
+                    </div>
+                    <h3>Catalog</h3>
+                    <div>
+                        <ul class="list-group">
+                            <button type="button" class="list-group-item">
+                                Cuchillos
+                                <span class="badge">14</span>
+                            </button>
+                            <button type="button" class="list-group-item">
+                                Lámparas
+                                <span class="badge">14</span>
+                            </button>
+                            <button type="button" class="list-group-item">
+                                Mates
+                                <span class="badge">14</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <h3>Widgets</h3>
+                    <div>
+                        <ul class="list-group">
+                            <button type="button" class="list-group-item">News</button>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h3>Title</h3>
+                </div>
+            </div>
+        </div>
     </div>
-		</div>
-	  <div class="clear"> </div>
-</div>
-<div class="copy-right">
-			<p><a href="http://tallerlapluma.com">© Taller La Pluma</a></p>
-</div>
-
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="clear"> </div>
+    </div>
+    <div class="copy-right">
+        <p><a href="http://tallerlapluma.com">© Taller La Pluma</a></p>
+    </div>
 </body>
 </html>
